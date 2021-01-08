@@ -33,7 +33,7 @@ export default function Home() {
         <div className="py-12 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
             <div className="lg:text-center">
-              <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-8xl font-serif">
+              <p className="mt-2 font-extrabold tracking-tight text-gray-900 text-base lg:text-8xl md:text-6xl text-4xl font-serif">
                 The 147 Members of Congress Who Voted to Overturn Election
                 Results
               </p>
