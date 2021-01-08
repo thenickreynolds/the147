@@ -2,7 +2,7 @@ import { Representative } from "../utils/data";
 
 export default function RepresentativeCard({ rep }: { rep: Representative }) {
   return (
-    <div className="bg-white rounded shadow-md border border-gray-300 flex bg-clip-border space-x-3 w-80 flex-grow m-2">
+    <div className="bg-white rounded shadow-md border border-gray-300 flex bg-clip-border space-x-3 w-80 flex-grow m-2 cursor-pointer hover:shadow-lg transform hover:scale-105 transition">
       <div className="flex-shrink-0">
         <img className="h-20 w-20" src={rep.image} alt={rep.name} />
       </div>
