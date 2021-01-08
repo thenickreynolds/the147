@@ -1,6 +1,6 @@
 import { Representative } from "../utils/data";
 
-export default function ({ rep }: { rep: Representative }) {
+export default function RepresentativeCard({ rep }: { rep: Representative }) {
   return (
     <div className="bg-white rounded shadow-md border border-gray-300 flex bg-clip-border space-x-3 w-80 flex-grow m-2">
       <div className="flex-shrink-0">
@@ -8,11 +8,13 @@ export default function ({ rep }: { rep: Representative }) {
       </div>
       <div className="flex flex-col justify-center">
         <div className="text-xl font-medium text-black">
-          {/* TODO: replace 'R' with alignment */}
-          {rep.name} <span className="text-gray-400">(R, {rep.location})</span>
+          {rep.name}{" "}
+          <span className="text-gray-400">
+            ({rep.alignment.charAt(0)}, {rep.location})
+          </span>
         </div>
         <p className="text-gray-500">
-          {rep.type} in {rep.location}
+          {rep.type}, up in {rep.election_year}
         </p>
       </div>
     </div>

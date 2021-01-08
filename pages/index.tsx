@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Representative from "../components/representative";
+import RepresentativeCard from "../components/representativeCard";
 import Data from "../utils/data";
 
 export default function Home() {
@@ -45,9 +45,9 @@ export default function Home() {
             </div>
 
             <div className="flex flex-wrap">
-              {Data.MEMBERS_OF_CONGRESS.map((rep) => {
-                return <Representative rep={rep} />;
-              })}
+              {Data.MEMBERS_OF_CONGRESS.map((rep) => (
+                <RepresentativeCard rep={rep} />
+              ))}
             </div>
           </div>
         </div>
