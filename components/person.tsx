@@ -1,8 +1,13 @@
-export default function ({ name, image }: { name: string; image: string }) {
+import { Representative } from "../utils/data";
+
+export default function ({ rep }: { rep: Representative }) {
   return (
     <div>
-      <img src={image} />
-      <span>{name}</span>
+      <img src={rep.image} />
+      <div>
+        <span>{rep.name}</span>
+        {/* <span>{rep.location}</span> */}
+      </div>
     </div>
   );
 }

@@ -43,8 +43,8 @@ export default function Home() {
         </p>
 
         <div className={styles.grid}>
-          {Data.PEOPLE.map((person) => {
-            return <Person name={person.name} image={person.image} />;
+          {Data.REPRESENTATIVES.map((rep) => {
+            return <Person rep={rep} />;
           })}
         </div>
 

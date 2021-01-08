@@ -1,5 +1,12 @@
+export type Representative = {
+  name: string;
+  type: "House" | "Senate";
+  location: string;
+  image: string;
+};
+
 export default class Data {
-  public static readonly PEOPLE = [
+  public static readonly REPRESENTATIVES: Representative[] = [
     {
       name: "Robert B. Aderholt",
       type: "House",
