@@ -1,11 +1,10 @@
 import Head from "next/head";
-import styles from "../styles/Home.module.css";
-import Person from "../components/person";
+import Representative from "../components/representative";
 import Data from "../utils/data";
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>
           The 147 Members of Congress Who Voted to Overturn Election Results
@@ -30,29 +29,36 @@ export default function Home() {
         <link rel="manifest" href="/site.webmanifest" />
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          The 147 Members of Congress Who Voted to Overturn Election Results
-        </h1>
+      <main>
+        <div className="py-12 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+            <div className="lg:text-center">
+              <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-8xl font-serif">
+                The 147 Members of Congress Who Voted to Overturn Election
+                Results
+              </p>
+              <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto font-serif">
+                <a href="https://www.nytimes.com/interactive/2021/01/07/us/elections/electoral-college-biden-objectors.html">
+                  Source: New York Times
+                </a>
+              </p>
+            </div>
 
-        <p className={styles.description}>
-          Sourced from{" "}
-          <a href="https://www.nytimes.com/interactive/2021/01/07/us/elections/electoral-college-biden-objectors.html">
-            The New York Times
-          </a>
-        </p>
-
-        <div className={styles.grid}>
-          {Data.MEMBERS_OF_CONGRESS.map((rep) => {
-            return <Person rep={rep} />;
-          })}
+            <div className="flex flex-wrap">
+              {Data.MEMBERS_OF_CONGRESS.map((rep) => {
+                return <Representative rep={rep} />;
+              })}
+            </div>
+          </div>
         </div>
-
-        <div></div>
       </main>
 
-      <footer className={styles.footer}>
-        Created by&nbsp;<a href="http://nickreynolds.net"> Nick Reynolds</a>
+      <footer>
+        <div className="flex justify-center p-4 bg-black text-gray-200">
+          <div>
+            <a href="http://nickreynolds.net">nick reynolds</a>
+          </div>
+        </div>
       </footer>
     </div>
   );
