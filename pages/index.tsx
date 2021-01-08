@@ -1,7 +1,7 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
-import Person from "../components/Person";
-import Data from "../utils/Data.jsx";
+import Person from "../components/person";
+import Data from "../utils/data";
 
 export default function Home() {
   return (
@@ -43,7 +43,7 @@ export default function Home() {
         </p>
 
         <div className={styles.grid}>
-          {Data.people.map((person) => {
+          {Data.PEOPLE.map((person) => {
             return <Person name={person.name} image={person.image} />;
           })}
         </div>

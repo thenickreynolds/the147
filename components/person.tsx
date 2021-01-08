@@ -1,4 +1,4 @@
-export default function ({ name, image }) {
+export default function ({ name, image }: { name: string; image: string }) {
   return (
     <div>
       <img src={image} />
