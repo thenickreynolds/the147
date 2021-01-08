@@ -8,7 +8,7 @@ export default function Home() {
     <div className={styles.container}>
       <Head>
         <title>
-          The 147 Representatives Who Voted to Overturn Election Results
+          The 147 Members of Congress Who Voted to Overturn Election Results
         </title>
         <link
           rel="apple-touch-icon"
@@ -32,7 +32,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          The 147 Representatives Who Voted to Overturn Election Results
+          The 147 Members of Congress Who Voted to Overturn Election Results
         </h1>
 
         <p className={styles.description}>
@@ -43,7 +43,7 @@ export default function Home() {
         </p>
 
         <div className={styles.grid}>
-          {Data.REPRESENTATIVES.map((rep) => {
+          {Data.MEMBERS_OF_CONGRESS.map((rep) => {
             return <Person rep={rep} />;
           })}
         </div>

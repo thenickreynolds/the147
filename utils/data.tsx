@@ -6,7 +6,7 @@ export type Representative = {
 };
 
 export default class Data {
-  public static readonly REPRESENTATIVES: Representative[] = [
+  public static readonly MEMBERS_OF_CONGRESS: Representative[] = [
     {
       name: "Robert B. Aderholt",
       type: "House",
