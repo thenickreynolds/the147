@@ -38,7 +38,7 @@ export default function RepresentativeContent() {
               className="ml-2 block w-full p-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none"
               onChange={(e) => setStateXX(e.target.value)}
             >
-              <option value={undefined}>All States</option>
+              <option value="">All States</option>
               {Data.ALL_STATES.map((state) => (
                 <option
                   value={state}
