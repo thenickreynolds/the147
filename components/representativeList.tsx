@@ -16,7 +16,7 @@ export default function RepresentativeList({
           {title}
         </h2>
       ) : null}
-      <div className="flex flex-wrap">
+      <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4">
         {reps.map((rep) => (
           <RepresentativeCard rep={rep} key={rep.name} />
         ))}
