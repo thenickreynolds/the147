@@ -1,7 +1,9 @@
+export type RepresentativeType = "House" | "Senate";
+
 export type Representative = {
   name: string;
   alignment: "Republican";
-  type: "House" | "Senate";
+  type: RepresentativeType;
   location: string;
   state_xx: string;
   seat: string | null;
