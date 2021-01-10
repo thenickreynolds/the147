@@ -16,11 +16,17 @@ export default function RepresentativeList({
           {title}
         </h2>
       ) : null}
-      <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4">
-        {reps.map((rep) => (
-          <RepresentativeCard rep={rep} key={rep.name} />
-        ))}
-      </div>
+      {reps.length === 0 ? (
+        <div className="grid justify-items-center text-xl font-bold">
+          No results
+        </div>
+      ) : (
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4">
+          {reps.map((rep) => (
+            <RepresentativeCard rep={rep} key={rep.name} />
+          ))}
+        </div>
+      )}
     </>
   );
 }
