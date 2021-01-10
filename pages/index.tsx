@@ -1,7 +1,6 @@
 import Head from "next/head";
 import Heading from "../components/heading";
-import RepresentativeCard from "../components/representativeCard";
-import Data from "../utils/data";
+import RepresentativeContent from "../components/representativeContent";
 
 export default function Home() {
   return (
@@ -34,12 +33,7 @@ export default function Home() {
         <div className="py-12 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
             <Heading />
-
-            <div className="flex flex-wrap">
-              {Data.MEMBERS_OF_CONGRESS.map((rep) => (
-                <RepresentativeCard rep={rep} />
-              ))}
-            </div>
+            <RepresentativeContent />
           </div>
         </div>
       </main>

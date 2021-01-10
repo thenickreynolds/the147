@@ -9,11 +9,14 @@
   },
   "dependencies": {
     "@types/classnames": "^2.2.11",
+    "@types/geoip-lite": "^1.4.1",
     "autoprefixer": "^10.2.1",
     "classnames": "^2.2.6",
+    "geoip-lite": "^1.4.2",
     "next": "^10.0.5",
     "postcss": "^8.2.3",
     "prettier": "^2.2.1",
+    "public-ip": "^4.0.3",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "tailwindcss": "^2.0.2"

@@ -4,7 +4,6 @@ import { Representative } from "../utils/data";
 const HIGHLIGHT_YEAR = 2022;
 
 export default function RepresentativeCard({ rep }: { rep: Representative }) {
-  console.log(rep.donate_url);
   return (
     <a
       href={rep.donate_url}
