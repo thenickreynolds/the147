@@ -20,6 +20,8 @@ const MODAL_STYLES = {
   },
 };
 
+Modal.setAppElement("#__next");
+
 export default function RepresentativeInfo({
   rep,
   onClose,
