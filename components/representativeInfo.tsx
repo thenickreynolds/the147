@@ -6,7 +6,7 @@ import { LinkButton } from "./buttons";
 
 const MODAL_STYLES = {
   overlay: {
-    background: "#ffffffee",
+    background: "#00000088",
   },
   content: {
     top: "50%",
@@ -42,7 +42,7 @@ export default function RepresentativeInfo({
             onClick={onClose}
           />
         </div>
-        <div className="flex flex-col items-center space-y-8 ml-10 mr-10">
+        <div className="flex flex-col items-center space-y-8 p-4 pl-8 pr-8">
           <img className="w-40 rounded-full shadow-md border" src={rep.image} />
 
           <div className="text-center">
