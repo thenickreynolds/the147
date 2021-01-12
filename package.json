@@ -10,6 +10,7 @@
   "dependencies": {
     "@types/classnames": "^2.2.11",
     "@types/geoip-lite": "^1.4.1",
+    "@types/react-modal": "^3.10.6",
     "autoprefixer": "^10.2.1",
     "classnames": "^2.2.6",
     "geoip-lite": "^1.4.2",
@@ -19,6 +20,7 @@
     "public-ip": "^4.0.3",
     "react": "17.0.1",
     "react-dom": "17.0.1",
+    "react-modal": "^3.12.1",
     "tailwindcss": "^2.0.2"
   },
   "devDependencies": {

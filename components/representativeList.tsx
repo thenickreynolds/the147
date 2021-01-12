@@ -5,9 +5,11 @@ import RepresentativeCard from "./representativeCard";
 export default function RepresentativeList({
   reps,
   title,
+  onSelect,
 }: {
   reps: Representative[];
   title?: string | null;
+  onSelect: (rep: Representative) => void;
 }) {
   return (
     <>
@@ -23,7 +25,11 @@ export default function RepresentativeList({
       ) : (
         <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4">
           {reps.map((rep) => (
-            <RepresentativeCard rep={rep} key={rep.name} />
+            <RepresentativeCard
+              rep={rep}
+              key={rep.name}
+              onClick={() => onSelect(rep)}
+            />
           ))}
         </div>
       )}

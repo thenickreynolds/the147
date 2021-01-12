@@ -1,6 +1,7 @@
 import { useState } from "react";
 import RepresentativeList from "./representativeList";
-import Data, { RepresentativeType } from "../utils/data";
+import Data, { Representative, RepresentativeType } from "../utils/data";
+import RepresentativeInfo from "./representativeInfo";
 
 function filterToSet(filter: string): Set<RepresentativeType> {
   switch (filter) {
@@ -18,6 +19,7 @@ export default function RepresentativeContent() {
     new Set<RepresentativeType>(filterToSet(""))
   );
   const [stateXX, setStateXX] = useState("");
+  const [selectedRep, setSelectedRep] = useState<Representative | null>(null);
 
   const validStates = new Set(
     Data.MEMBERS_OF_CONGRESS.map((rep) => rep.state_xx)
@@ -30,6 +32,12 @@ export default function RepresentativeContent() {
 
   return (
     <>
+      {selectedRep ? (
+        <RepresentativeInfo
+          rep={selectedRep}
+          onClose={() => setSelectedRep(null)}
+        />
+      ) : null}
       <div className="text-l grid justify-items-center">
         <div className="flex space-x-8">
           <label className="flex items-center font-bold">
@@ -63,7 +71,7 @@ export default function RepresentativeContent() {
           </label>
         </div>
       </div>
-      <RepresentativeList reps={reps} />
+      <RepresentativeList reps={reps} onSelect={(rep) => setSelectedRep(rep)} />
     </>
   );
 }

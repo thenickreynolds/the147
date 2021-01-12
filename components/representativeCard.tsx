@@ -3,12 +3,17 @@ import { Representative } from "../utils/data";
 
 const HIGHLIGHT_YEAR = 2022;
 
-export default function RepresentativeCard({ rep }: { rep: Representative }) {
+export default function RepresentativeCard({
+  rep,
+  onClick,
+}: {
+  rep: Representative;
+  onClick: () => void;
+}) {
   return (
     <a
-      href={rep.donate_url}
-      target="_blank"
-      className="bg-white rounded shadow-md border border-gray-300 flex bg-clip-border space-x-3 hover:shadow-lg transform hover:scale-105 transition"
+      onClick={onClick}
+      className="bg-white rounded shadow-md border border-gray-300 flex bg-clip-border space-x-3 hover:shadow-lg transform hover:scale-105 transition cursor-pointer"
     >
       <div className="flex-shrink-0">
         <img className="h-20 w-20" src={rep.image} alt={rep.name} />
