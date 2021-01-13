@@ -56,10 +56,14 @@ export default function RepresentativeInfo({
               </i>
             </p>
           </div>
+          <div className="w-full text-center">
+            Up for re-election in {rep.election_year}, previous win margin{" "}
+            {rep.win_margin === 0 ? "< 1" : rep.win_margin * 100}%
+          </div>
           <div className="w-full text-left font-bold text-xl space-y-2">
             <div>Take Action</div>
             <div>
-              <LinkButton text="Donate via Act Blue" href={rep.donate_url} />
+              <LinkButton text="Donate via Act Blue" href={rep.act_blue_url} />
             </div>
           </div>
         </div>
