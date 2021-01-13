@@ -1,6 +1,7 @@
+import classNames from "classnames";
 import React from "react";
 import Modal from "react-modal";
-import { Representative } from "../utils/data";
+import Data, { Representative } from "../utils/data";
 import RepUtils from "../utils/repUtils";
 import { LinkButton } from "./buttons";
 
@@ -27,6 +28,8 @@ export default function RepresentativeInfo({
   rep: Representative;
   onClose: () => void;
 }) {
+  const highlightElectionYear = rep.election_year === Data.NEXT_ELECTION_YEAR;
+
   return (
     <Modal
       isOpen={true}
@@ -55,8 +58,16 @@ export default function RepresentativeInfo({
             </p>
           </div>
           <div className="w-full text-center">
-            Up for re-election in {rep.election_year}, previous win margin{" "}
-            {rep.win_margin === 0 ? "< 1" : rep.win_margin * 100}%
+            Up for re-election in{" "}
+            <span
+              className={classNames({
+                "text-red-600": highlightElectionYear,
+                "font-bold": highlightElectionYear,
+              })}
+            >
+              {rep.election_year}
+            </span>
+            . Previous win margin {RepUtils.getWinMargin(rep)}.
           </div>
           <div className="w-full text-left font-bold text-xl space-y-2">
             <div>Take Action</div>

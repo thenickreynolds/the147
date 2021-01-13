@@ -9,4 +9,10 @@ export default class RepUtils {
         return "Senator";
     }
   }
+
+  public static getWinMargin(rep: Representative) {
+    if (rep.win_margin < 0.01) return `< 1%`;
+
+    return `${Math.floor(rep.win_margin * 100)}%`;
+  }
 }

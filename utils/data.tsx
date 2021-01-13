@@ -16,6 +16,8 @@ export type Representative = {
 };
 
 export default class Data {
+  public static readonly NEXT_ELECTION_YEAR = 2022;
+
   public static readonly ALL_STATES = [
     "AL",
     "AK",

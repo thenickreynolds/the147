@@ -1,7 +1,5 @@
 import classNames from "classnames";
-import { Representative } from "../utils/data";
-
-const HIGHLIGHT_YEAR = 2022;
+import Data, { Representative } from "../utils/data";
 
 export default function RepresentativeCard({
   rep,
@@ -10,6 +8,8 @@ export default function RepresentativeCard({
   rep: Representative;
   onClick: () => void;
 }) {
+  const highlightElectionYear = rep.election_year === Data.NEXT_ELECTION_YEAR;
+
   return (
     <a
       onClick={onClick}
@@ -27,8 +27,8 @@ export default function RepresentativeCard({
         </div>
         <p
           className={classNames({
-            "text-gray-500": true,
-            "text-red-600": rep.election_year === HIGHLIGHT_YEAR,
+            "text-gray-500": !highlightElectionYear,
+            "text-red-600": highlightElectionYear,
           })}
         >
           {rep.type}, up in {rep.election_year}
