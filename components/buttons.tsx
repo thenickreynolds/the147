@@ -9,7 +9,7 @@ export function ClickableButton({
 }) {
   return (
     <div
-      className="cursor-pointer text-center font-bold p-3 border rounded-md bg-clip-border transition-all shadow-sm hover:shadow-md hv:bg-red text-white bg-gradient-to-r from-blue-400 to-indigo-500 hover:blue-500 p-2"
+      className="cursor-pointer text-center font-bold p-3 border rounded-md bg-clip-border transition-all shadow-sm hover:shadow-md hv:bg-red text-white bg-gradient-to-r from-blue-400 to-indigo-500 hover:blue-500 p-2 select-none"
       onClick={onClick}
     >
       {text}
